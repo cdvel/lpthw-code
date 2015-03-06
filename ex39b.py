@@ -94,8 +94,8 @@ for ciudad, habitantes in poblacion.items():
 	encoded = ciudad.encode('utf-8')
 	formatted = locale.format('%d', habitantes, True);
 	depto = ciudadxdepto[ciudad]
-	print " %s, %s = \t\t%s " % (encoded, depto.encode('utf-8'),formatted)
-
+	dots = '.'*(40 - len(encoded) - len(depto))
+	print " %s, %s %s %s " % (encoded, depto.encode('utf-8'), dots,formatted)
 
 # obtener poblacion no existente sin error
 poblacion.get(u"San Andrés", None)
